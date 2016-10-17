@@ -1,0 +1,46 @@
+{
+  "name": "webpack-ava-recipe",
+  "version": "1.0.0",
+  "description": "An example of compiling your tests using webpack before running them through Ava.",
+  "main": "./src/foo.js",
+  "scripts": {
+    "test": "webpack && ava",
+    "watch:webpack": "webpack --watch",
+    "watch:runTests": "ava --watch",
+    "watch:test":"start cmd /c npm run watch:webpack & start cmd /c npm run watch:runTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greyepoxy/webpack-ava-recipe.git"
+  },
+  "keywords": [
+    "webpack",
+    "ava",
+    "recipe"
+  ],
+  "author": "greyepoxy",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "webpack": "^1.13.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-3"
+    ]
+  },
+  "ava": {
+    "files": [
+      "_build/tests.js"
+    ],
+    "verbose": true,
+    "require": [
+      "babel-polyfill"
+    ]
+  }
+}
