@@ -4,7 +4,7 @@ var nodeExternals = require('webpack-node-externals');
 module.exports = {
   mode: 'development',
   entry: {
-    main: ['./src/tests.js']
+    main: ['./src/foo.tests.js']
   },
   target: 'node',
   output: {

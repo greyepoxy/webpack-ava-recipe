@@ -30,7 +30,7 @@
   },
   "ava": {
     "files": [
-      "_build/tests.js"
+      "_build/**/*"
     ],
     "verbose": true
   }
